@@ -219,7 +219,24 @@ ruff check  # `ruff check --fix` to auto-fix
 MPLBACKEND='agg' pytest -vsx tests/
 ```
 
+## How to setup Medsam2 semi-automatic
+
+Move the files inside MedSAM2-click to anaconda3\envs\labelme\Lib\site-packages\labelme, and replace the old app.py with the new app.py .
+
+You can download MedSAM2_pretrain checkpoint from checkpoints folder:
+```bash
+bash download_ckpts.sh
+```
+
+After downloading the checkpoint, you need to open app.py,
+and update the path to the checkpoint file, which is around line 1950. 
+It is recommended to use an absolute path to ensure no errors occur.
 
 ## Acknowledgement
 
 This repo is the fork of [mpitid/pylabelme](https://github.com/mpitid/pylabelme).
+
+
+
+
+
