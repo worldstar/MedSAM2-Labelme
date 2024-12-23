@@ -239,12 +239,14 @@ We need to use [Pytorch](https://pytorch.org/) gpu version
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 ```
 
-### How to use
+### How to start
 
 Open your image, and click medsam2 button.
+Then a red dot will appear at the location you click on the window.
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2-labelme-example.gif" width="80%" />
 
 Click on the window , and press Enter after finishing.
+It will automatically save a JSON file, and the file will be named as `filename.json`.
 
 ## Acknowledgement
 
