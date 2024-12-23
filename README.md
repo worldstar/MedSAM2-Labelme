@@ -242,7 +242,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 ### How to use
 
 Open your image, and click medsam2 button.
-<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2-labelme-example.gif" width="30%" />
+<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2-labelme-example.gif" width="80%" />
 
 Click on the window , and press Enter after finishing.
 
