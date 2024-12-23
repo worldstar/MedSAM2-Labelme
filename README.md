@@ -239,6 +239,10 @@ We need to use [Pytorch](https://pytorch.org/) gpu version
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 ```
 
+### How to use
+
+
+
 ## Acknowledgement
 
 This repo is the fork of [mpitid/pylabelme](https://github.com/mpitid/pylabelme).
