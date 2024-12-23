@@ -229,8 +229,7 @@ bash download_ckpts.sh
 ```
 
 ### After downloading the checkpoint
-You need to open app.py,
-and update the path to the checkpoint file, which is around line 1950. 
+You need to open app.py, and update the path to the checkpoint file, which is around line 1950.  
 It is recommended to use an absolute path to ensure no errors occur.
 
 ### Download Pytoch
@@ -241,12 +240,12 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 
 ### How to start
 
-Open your image, and click medsam2 button.
-Then a red dot will appear at the location you click on the window.
+Open your image, and click medsam2 button.  
+Then a red dot will appear at the location you click on the window.  
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2-labelme-example.gif" width="80%" />
 
-Click on the window , and press Enter after finishing.
-It will automatically save a JSON file, and the file will be named as `filename.json`.
+Click on the window , and press Enter after finishing.  
+It will automatically save a JSON file, and the file will be named as `filename.json`.  
 
 ## Acknowledgement
 
