@@ -228,9 +228,16 @@ You can download MedSAM2_pretrain checkpoint from checkpoints folder:
 bash download_ckpts.sh
 ```
 
-After downloading the checkpoint, you need to open app.py,
+### After downloading the checkpoint
+You need to open app.py,
 and update the path to the checkpoint file, which is around line 1950. 
 It is recommended to use an absolute path to ensure no errors occur.
+
+### Download Pytoch
+We need to use [Pytorch](https://pytorch.org/) gpu version
+```bash
+conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+```
 
 ## Acknowledgement
 
