@@ -247,7 +247,9 @@ Then a red dot will appear at the location you click on the window.
 
 Click on the window , and press Enter after finishing.  
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
+  
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/screen%202024-12-23%20164050.png" width="100%" />
+  
 
 ## Acknowledgement
 
