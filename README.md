@@ -242,10 +242,12 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 
 Open your image, and click medsam2 button.  
 Then a red dot will appear at the location you click on the window.  
-<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2-labelme-example.gif" width="100%" />
+  
+<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/medsam2-labelme-example.gif" width="100%" />
 
 Click on the window , and press Enter after finishing.  
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
+<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/screen%202024-12-23%20164050.png" width="100%" />
 
 ## Acknowledgement
 
