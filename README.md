@@ -93,48 +93,6 @@ pip install labelme
 pip3 install git+https://github.com/labelmeai/labelme
 ```
 
-## How to develop
-
-```bash
-git clone https://github.com/labelmeai/labelme.git
-cd labelme
-
-# Install anaconda3 and labelme
-curl -L https://github.com/wkentaro/dotfiles/raw/main/local/bin/install_anaconda3.sh | bash -s .
-source .anaconda3/bin/activate
-pip install -e .
-```
-
-### How to build standalone executable
-
-Below shows how to build the standalone executable on macOS, Linux and Windows.  
-
-```bash
-# Setup conda
-conda create --name labelme python=3.9
-conda activate labelme
-
-# Build the standalone executable
-pip install .
-pip install 'matplotlib<3.3'
-pip install pyinstaller
-pyinstaller labelme.spec
-dist/labelme --version
-```
-
-### How to contribute
-
-Make sure below test passes on your environment.  
-See `.github/workflows/ci.yml` for more detail.
-
-```bash
-pip install -r requirements-dev.txt
-
-ruff format --check  # `ruff format` to auto-fix
-ruff check  # `ruff check --fix` to auto-fix
-MPLBACKEND='agg' pytest -vsx tests/
-```
-
 ## Setup MedSAM2 semi-automatic
 
 Move the files inside MedSAM2-click to `anaconda3\envs\labelme\Lib\site-packages\labelme`, and replace the old `app.py` with the new `app.py` .
