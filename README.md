@@ -69,11 +69,13 @@ MPLBACKEND='agg' pytest -vsx tests/
 
 ## Setup MedSAM2 semi-automatic
 
-Move the files inside MedSAM2-click to anaconda3\envs\labelme\Lib\site-packages\labelme, and replace the old app.py with the new app.py .
+Move the files inside MedSAM2-click to `anaconda3\envs\labelme\Lib\site-packages\labelme`, and replace the old `app.py` with the new `app.py` .
 
 You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2-click/checkpoints`:
 ```bash
 bash download_ckpts.sh
+
+#or you can open download_ckpt.sh then copy the url and download on your browser.
 ```
 
 ### After downloading the checkpoint
