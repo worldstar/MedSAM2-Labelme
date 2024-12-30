@@ -122,7 +122,7 @@ You need to rename the `Qt5` folder to `Qt` in the `anaconda3\envs\labelme\Libra
   
 ### No such file or directory for your checkpoint.  
 ```bash
-FileNotFoundError: [Errno 2] No such file or directory: 'path/to/checkpoints/MedSAM2_pretrain.pth
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/checkpoints/MedSAM2_pretrain.pth'
 ```
 You need to change it to an absolute path.
 
