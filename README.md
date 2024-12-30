@@ -118,7 +118,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 ## Some possible errors  
 ### You might encounter this Qt error on Windows 11.  
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/error1.png">  
-You need to rename the `Qt5` folder to `Qt` in the `anaconda3\envs\labelme\Library\qml\` directory.
+You need to rename the ` Qt5 ` folder to `Qt` in the `anaconda3\envs\labelme\Library\qml\` directory.
   
 ### No such file or directory for your checkpoint.  
 ```bash
