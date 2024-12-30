@@ -37,7 +37,6 @@ source .anaconda3/bin/activate
 pip install -e .
 ```
 
-
 ### How to build standalone executable
 
 Below shows how to build the standalone executable on macOS, Linux and Windows.  
@@ -55,7 +54,6 @@ pyinstaller labelme.spec
 dist/labelme --version
 ```
 
-
 ### How to contribute
 
 Make sure below test passes on your environment.  
@@ -69,11 +67,11 @@ ruff check  # `ruff check --fix` to auto-fix
 MPLBACKEND='agg' pytest -vsx tests/
 ```
 
-## How to setup MedSAM2 semi-automatic
+## Setup MedSAM2 semi-automatic
 
 Move the files inside MedSAM2-click to anaconda3\envs\labelme\Lib\site-packages\labelme, and replace the old app.py with the new app.py .
 
-You can download MedSAM2_pretrain checkpoint from checkpoints folder:
+You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2-click/checkpoints`:
 ```bash
 bash download_ckpts.sh
 ```
@@ -88,7 +86,7 @@ We need to use [Pytorch](https://pytorch.org/) gpu version
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 ```
 
-### Some possible errors.  
+## Some possible errors  
 You might encounter this Qt error on Windows 11.  
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/error1.png">  
 You need to rename the `Qt5` folder to `Qt` in the `anaconda3\envs\labelme\Library\qml\` directory.
