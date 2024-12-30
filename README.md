@@ -126,6 +126,9 @@ FileNotFoundError: [Errno 2] No such file or directory: 'path/to/checkpoints/Med
 ```
 You need to change it to an absolute path.
 
+### For other `ModuleNotFoundError: No module named` errors.
+You just need to use pip or conda to install the corresponding module.
+
 ## Train yourself
 
 We need to use [roboflow](https://roboflow.com/).  
