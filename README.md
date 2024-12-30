@@ -1,4 +1,4 @@
-## MedSAM2 
+## MedSAM2 within Labelme  
 
 We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform image segmentation.  
 MedSAM2 achieves better performance in medical image segmentation.  
