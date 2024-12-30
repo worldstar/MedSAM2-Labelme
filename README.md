@@ -25,6 +25,74 @@ It will automatically save a JSON file, and the file will be named as `filename.
   
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/screen%202024-12-23%20170840.png" width="100%" />
 
+## Installation
+
+There are options:
+
+- Platform agnostic installation: [Anaconda](#anaconda)
+- Platform specific installation: [Ubuntu](#ubuntu), [macOS](#macos), [Windows](#windows)
+- Pre-build binaries from [the release section](https://github.com/labelmeai/labelme/releases)
+
+### Anaconda
+
+You need install [Anaconda](https://www.continuum.io/downloads), then run below:
+
+```bash
+# python3
+conda create --name=labelme python=3
+source activate labelme
+# conda install -c conda-forge pyside2
+# conda install pyqt
+# pip install pyqt5  # pyqt5 can be installed via pip on python3
+pip install labelme
+# or you can install everything by conda command
+# conda install labelme -c conda-forge
+```
+
+### Ubuntu
+
+```bash
+sudo apt-get install labelme
+
+# or
+sudo pip3 install labelme
+
+# or install standalone executable from:
+# https://github.com/labelmeai/labelme/releases
+
+# or install from source
+pip3 install git+https://github.com/labelmeai/labelme
+```
+
+### macOS
+
+```bash
+brew install pyqt  # maybe pyqt5
+pip install labelme
+
+# or install standalone executable/app from:
+# https://github.com/labelmeai/labelme/releases
+
+# or install from source
+pip3 install git+https://github.com/labelmeai/labelme
+```
+
+### Windows
+
+Install [Anaconda](https://www.continuum.io/downloads), then in an Anaconda Prompt run:
+
+```bash
+conda create --name=labelme python=3
+conda activate labelme
+pip install labelme
+
+# or install standalone executable/app from:
+# https://github.com/labelmeai/labelme/releases
+
+# or install from source
+pip3 install git+https://github.com/labelmeai/labelme
+```
+
 ## How to develop
 
 ```bash
