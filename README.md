@@ -15,6 +15,7 @@ labelme  # just open gui
 ```
 
 Open your image, and click medsam2 button.  
+You don't need to modify the AI model.  
 Then a red dot will appear at the location you click on the window.  
   
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/medsam2-labelme-example.gif" width="100%" />
@@ -87,18 +88,10 @@ We need to use [Pytorch](https://pytorch.org/) gpu version
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 ```
 
-### How to start
-
-Open your image, and click medsam2 button.  
-Then a red dot will appear at the location you click on the window.  
-  
-<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/medsam2-labelme-example.gif" width="100%" />
-
-Click on the window , and press Enter after finishing.  
-It will automatically save a JSON file, and the file will be named as `filename.json`.  
-  
-<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/screen%202024-12-23%20170840.png" width="100%" />
-  
+### Some possible errors.  
+You might encounter this Qt error on Windows 11.  
+<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/error1.png">  
+You need to rename the `Qt5` folder to `Qt` in the `anaconda3\envs\labelme\Library\qml\` directory.
 
 ## Acknowledgement
 
