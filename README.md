@@ -264,7 +264,7 @@ base_annotated_image = base_annotator.annotate(base_annotated_image, detections=
 sv.plot_images_grid(images=[annotated_image, base_annotated_image], titles=["Fine-Tuned SAM-2.1", "Base SAM-2.1"], grid_size=(1, 2))
 ```
 
-### After Traning
+### Final
 You need to move `best.pt` to the `anaconda3\envs\labelme\Lib\site-packages\labelme\checkpoints` directory.  
 Then, update the `model path` in `app.py`,which is around line 1883.
 
