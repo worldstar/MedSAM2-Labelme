@@ -1,6 +1,6 @@
 ## MedSAM2 within Labelme  
 
-### We also have automatic medsam2 provided at the end.
+### We also have automatic MedSAM2 provided at the end.
 We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform image segmentation.  
 MedSAM2 achieves better performance in medical image segmentation.  
   
@@ -272,6 +272,23 @@ sv.plot_images_grid(images=[annotated_image, base_annotated_image], titles=["Fin
 ### Final
 You need to move `best.pt` to the `anaconda3\envs\labelme\Lib\site-packages\labelme\checkpoints` directory.  
 Then, update the `model path` in `app.py`,which is around line 1883.
+ 
+## How to fine-tune MedSAM2
+If the fine-tuned MedSAM2 can be used for automatic annotation and provides high accuracy, then this MedSAM2 can certainly be used for manual annotation.  
+  
+### At the beginning, select data
+It is necessary to select some data with distinct features.  
+Like this kind of data, where the tumor is relatively complete and clearly visible.  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/IM-0023-0039.png" width=100%>
+
+### Dataset content
+Your dataset must include both images with tumors and images without tumors (treated as background). Otherwise, MedSAM2 might mistakenly annotate the heart.
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-heart.png" width=100%>
+
+### Training
+After the first round of training, the model will look like this.  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-fine-tune.png" width=100%>
+Then, you need to modify the dataset by adding some less obvious tumors and continue training using the fine-tuned MedSAM2.  
 
 ## MedSAM2 Automatic
 We combine semi-automatic and automatic into one file.  
