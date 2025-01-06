@@ -279,15 +279,15 @@ If the fine-tuned MedSAM2 can be used for automatic annotation and provides high
 ### At the beginning, select data
 It is necessary to select some data with distinct features.  
 Like this kind of data, where the tumor is relatively complete and clearly visible.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/IM-0023-0039.png" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/IM-0023-0039.png" width=75%>  
 
 ### Dataset content
 Your dataset must include both images with tumors and images without tumors (treated as background). Otherwise, MedSAM2 might mistakenly annotate the heart.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-heart.png" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-heart.png" width=75%>  
 
 ### Training
 After the first round of training, the model will look like this.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-fine-tune.png" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-fine-tune.png" width=75%>  
 Then, you need to modify the dataset by adding some less obvious tumors and continue training using the fine-tuned MedSAM2.  
 
 ## MedSAM2 Automatic
