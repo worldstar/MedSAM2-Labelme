@@ -271,6 +271,11 @@ sv.plot_images_grid(images=[annotated_image, base_annotated_image], titles=["Fin
 You need to move `best.pt` to the `anaconda3\envs\labelme\Lib\site-packages\labelme\checkpoints` directory.  
 Then, update the `model path` in `app.py`,which is around line 1883.
 
+## MedSAM2 Automatic
+We combine semi-automatic and automatic into one file.  
+You can download the `app.py` in `MedSAM2-auto`,but now the MedSAM2_pretrain is not enough to support accuracy of automatic.
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-combine.png" width=100%>
+
 ## Acknowledgement
 
 This repo is the fork of [mpitid/pylabelme](https://github.com/mpitid/pylabelme).
