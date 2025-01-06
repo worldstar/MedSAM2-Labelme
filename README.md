@@ -2,6 +2,7 @@
 
 We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform image segmentation.  
 MedSAM2 achieves better performance in medical image segmentation.  
+We also have automatic medsam2 provided at the end.  
 
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/main%20windows.png" width=100%>
 
