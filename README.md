@@ -293,7 +293,13 @@ Then, you need to modify the dataset by adding some less obvious tumors and cont
 ## MedSAM2 Automatic
 We combine semi-automatic and automatic into one file.  
 You can download the `app.py` in `MedSAM2-auto`,but now the MedSAM2_pretrain is not enough to support accuracy of automatic.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-combine.png" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-combine.png" width=100%>  
+
+### Usage
+Click on [Automatic Annotation], then wait for a period of time. The duration depends on your device.  
+After the model completes the automatic annotation, it will automatically move to the next image.  
+This is the MedSAM2 model trained with the first fine-tuning, so it is normal for the accuracy to be low.  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-auto.gif" width=100%>
 
 ## Acknowledgement
 
