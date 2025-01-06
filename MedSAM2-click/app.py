@@ -1880,7 +1880,7 @@ class MainWindow(QtWidgets.QMainWindow):
         root = tk.Tk()
         root.withdraw()
 
-        checkpoint = "C:/Users/user/anaconda3/envs/project/Lib/site-packages/checkpoints/MedSAM2_pretrain.pth"
+        checkpoint = "path/to/anaconda3/envs/project/Lib/site-packages/checkpoints/MedSAM2_pretrain.pth"
         model_cfg = "sam2_hiera_t.yaml"
         sam2 = build_sam2(model_cfg, checkpoint, device="cuda")
         #mask_generator = SAM2AutomaticMaskGenerator(sam2)
