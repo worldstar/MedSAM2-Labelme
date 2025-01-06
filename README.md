@@ -18,7 +18,7 @@ Open your image, and click medsam2 button.
 You don't need to modify the AI model.  
 Then a red dot will appear at the location you click on the window.  
   
-<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/medsam2-labelme-example.gif" width="100%" />
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/labelme-medsam2-example.gif" width="100%" />
 
 Click on the window , and press Enter after finishing.  
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
