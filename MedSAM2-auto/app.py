@@ -45,10 +45,10 @@ from PIL import ImageQt
 from PIL import Image
 import matplotlib.pyplot as plt
 import torch
-from sam2_train.build_sam import build_sam2
-from sam2_train.sam2_image_predictor import SAM2ImagePredictor
-from sam2_train.modeling.sam2_base import SAM2Base
-from sam2_train.automatic_mask_generator import SAM2AutomaticMaskGenerator
+from labelme.sam2_train.build_sam import build_sam2
+from labelme.sam2_train.sam2_image_predictor import SAM2ImagePredictor
+from labelme.sam2_train.modeling.sam2_base import SAM2Base
+from labelme.sam2_train.automatic_mask_generator import SAM2AutomaticMaskGenerator
 import cv2
 import json
 import base64
@@ -56,6 +56,7 @@ from skimage import measure
 from pathlib import Path
 from io import BytesIO
 import supervision as sv
+
 ###
 
 # FIXME
@@ -72,12 +73,12 @@ class MainWindow(QtWidgets.QMainWindow):
     FIT_WINDOW, FIT_WIDTH, MANUAL_ZOOM = 0, 1, 2
 
     def __init__(
-        self,
-        config=None,
-        filename=None,
-        output=None,
-        output_file=None,
-        output_dir=None,
+            self,
+            config=None,
+            filename=None,
+            output=None,
+            output_file=None,
+            output_dir=None,
     ):
         if output is not None:
             logger.warning("argument output is deprecated, use output_file instead")
@@ -239,7 +240,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.tr("Quit application"),
         )
         open_ = action(
-            self.tr("&開啟\n"),
+            self.tr("&Open\n"),
             self.openFile,
             shortcuts["open"],
             "open",
@@ -252,16 +253,16 @@ class MainWindow(QtWidgets.QMainWindow):
             "open",
             self.tr("Open Dir"),
         )
-### medsam2
+        ### medsam2
         automedsam2 = action(
             self.tr("&自動標註\n"),
             self.automedsam2,
         )
         medsam2 = action(
-            self.tr("&medsam2\n"),
+            self.tr("&手動標注\n"),
             self.medsam2
         )
-###
+        ###
         openNextImg = action(
             self.tr("&Next Image"),
             self.openNextImg,
@@ -1317,9 +1318,9 @@ class MainWindow(QtWidgets.QMainWindow):
             label_id += self._config["shift_auto_shape_color"]
             return LABEL_COLORMAP[label_id % len(LABEL_COLORMAP)]
         elif (
-            self._config["shape_color"] == "manual"
-            and self._config["label_colors"]
-            and label in self._config["label_colors"]
+                self._config["shape_color"] == "manual"
+                and self._config["label_colors"]
+                and label in self._config["label_colors"]
         ):
             return self._config["label_colors"][label]
         elif self._config["default_shape_color"]:
@@ -1616,7 +1617,7 @@ class MainWindow(QtWidgets.QMainWindow):
         """Load the specified file, or the last opened file if None."""
         # changing fileListWidget loads file
         if filename in self.imageList and (
-            self.fileListWidget.currentRow() != self.imageList.index(filename)
+                self.fileListWidget.currentRow() != self.imageList.index(filename)
         ):
             self.fileListWidget.setCurrentRow(self.imageList.index(filename))
             self.fileListWidget.repaint()
@@ -1743,9 +1744,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def resizeEvent(self, event):
         if (
-            self.canvas
-            and not self.image.isNull()
-            and self.zoomMode != self.MANUAL_ZOOM
+                self.canvas
+                and not self.image.isNull()
+                and self.zoomMode != self.MANUAL_ZOOM
         ):
             self.adjustScale()
         super(MainWindow, self).resizeEvent(event)
@@ -1822,7 +1823,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def openPrevImg(self, _value=False):
         keep_prev = self._config["keep_prev"]
         if QtWidgets.QApplication.keyboardModifiers() == (
-            Qt.ControlModifier | Qt.ShiftModifier
+                Qt.ControlModifier | Qt.ShiftModifier
         ):
             self._config["keep_prev"] = True
 
@@ -1846,7 +1847,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def openNextImg(self, _value=False, load=True):
         keep_prev = self._config["keep_prev"]
         if QtWidgets.QApplication.keyboardModifiers() == (
-            Qt.ControlModifier | Qt.ShiftModifier
+                Qt.ControlModifier | Qt.ShiftModifier
         ):
             self._config["keep_prev"] = True
 
@@ -1872,7 +1873,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self._config["keep_prev"] = keep_prev
 
-### medsam2
     def automedsam2(self, _value=False, load=True):
         if torch.cuda.is_available():
             device = torch.device("cuda")
@@ -1881,12 +1881,12 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             device = torch.device("cpu")
         print(f"using device: {device}")
-        #初始化模型
-        checkpoint = "C:/Users/user/anaconda3/envs/project/Lib/site-packages/checkpoints/MedSAM2_pretrain.pth"
+        # 初始化模型
+        checkpoint = "D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/MedSAM2_pretrain.pth"
         model_cfg = "sam2_hiera_t.yaml"
         sam2 = build_sam2(model_cfg, checkpoint, device="cuda")
         mask_generator = SAM2AutomaticMaskGenerator(sam2)
-        #預測圖片
+        # 預測圖片
         opened_image = np.array(Image.open(self.imagePath).convert("RGB"))
         result = mask_generator.generate(opened_image)
         detections = sv.Detections.from_sam(sam_result=result)
@@ -1901,7 +1901,7 @@ class MainWindow(QtWidgets.QMainWindow):
         plt.axis("off")
         plt.show() 
         '''
-        #存成json檔
+        # 存成json檔
         json_data = {
             "version": "4.5.7",
             "flags": {},
@@ -1910,33 +1910,33 @@ class MainWindow(QtWidgets.QMainWindow):
             "imageData": None,
             "imageHeight": opened_image.shape[0],
             "imageWidth": opened_image.shape[1],
-            }
+        }
         if hasattr(detections, 'mask') and detections.mask is not None:
-            mask = detections.mask[0]  
+            mask = detections.mask[0]
             mask = mask.astype(np.uint8)
             contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
             for idx, contour in enumerate(contours):
-                points = contour.reshape(-1, 2).tolist() 
+                points = contour.reshape(-1, 2).tolist()
                 shape = {
-                    "label": f"object_{idx+1}",
+                    "label": f"object_{idx + 1}",
                     "points": points,
                     "group_id": None,
                     "shape_type": "polygon",
                     "flags": {},
                 }
                 json_data["shapes"].append(shape)
-                
+
         json_path = os.path.join(self.lastOpenDir, f"{os.path.splitext(image_name)[0]}.json")
         with open(json_path, "w") as f:
             json.dump(json_data, f, indent=4)
-        #讀取json檔
+        # 讀取json檔
         self.loadFile(json_path)
         self.filename = self.imagePath
-        #切下一張
+        # 切下一張
         keep_prev = self._config["keep_prev"]
         if QtWidgets.QApplication.keyboardModifiers() == (
-            Qt.ControlModifier | Qt.ShiftModifier
+                Qt.ControlModifier | Qt.ShiftModifier
         ):
             self._config["keep_prev"] = True
 
@@ -1962,6 +1962,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self._config["keep_prev"] = keep_prev
 
+    ### medsam2
     def medsam2(self):
         if torch.cuda.is_available():
             device = torch.device("cuda")
@@ -1970,21 +1971,42 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             device = torch.device("cpu")
         print(f"using device: {device}")
-        
-        checkpoint = "C:/Users/user/anaconda3/envs/project/Lib/site-packages/checkpoints/MedSAM2_pretrain.pth"
+
+        root = tk.Tk()
+        root.withdraw()
+
+        checkpoint = "D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/MedSAM2_pretrain.pth"
         model_cfg = "sam2_hiera_t.yaml"
         sam2 = build_sam2(model_cfg, checkpoint, device="cuda")
-        mask_generator = SAM2AutomaticMaskGenerator(sam2)
-
+        # mask_generator = SAM2AutomaticMaskGenerator(sam2)
+        predictor = SAM2ImagePredictor(sam2)
         opened_image = np.array(Image.open(self.imagePath).convert("RGB"))
-        result = mask_generator.generate(opened_image)
-        detections = sv.Detections.from_sam(sam_result=result)
-        mask_annotator = sv.MaskAnnotator(color_lookup=sv.ColorLookup.INDEX)
-        annotated_image = opened_image.copy()
-        annotated_image = mask_annotator.annotate(annotated_image, detections=detections)
-        image_name = self.filename
+        predictor.set_image(opened_image)
+        x_axis = []
+        y_axis = []
 
-        #存成json檔
+        def on_ELENT_LBUTTONDOWN(event, x, y, flags, param):
+            if event == cv2.EVENT_LBUTTONDOWN:
+                xy = "%d,%d" % (x, y)
+                x_axis.append(x)
+                y_axis.append(y)
+                cv2.circle(opened_image, (x, y), 2, (0, 0, 255), 1)
+                cv2.imshow("image", opened_image)
+
+        cv2.namedWindow("image", cv2.WINDOW_NORMAL)
+        cv2.setMouseCallback("image", on_ELENT_LBUTTONDOWN)
+        cv2.imshow("image", opened_image)
+        cv2.waitKey(0)
+        input_point = np.array([[x_axis[i], y_axis[i]] for i in range(len(x_axis))])
+        input_label = np.ones(len(x_axis), dtype=int)
+
+        masks, scores, _ = predictor.predict(
+            point_coords=input_point,
+            point_labels=input_label,
+            multimask_output=False,
+        )
+        # 存成json檔
+        image_name = self.filename
         json_data = {
             "version": "4.5.7",
             "flags": {},
@@ -1993,29 +2015,29 @@ class MainWindow(QtWidgets.QMainWindow):
             "imageData": None,
             "imageHeight": opened_image.shape[0],
             "imageWidth": opened_image.shape[1],
-            }
-        if hasattr(detections, 'mask') and detections.mask is not None:
-            mask = detections.mask[0]  
-            mask = mask.astype(np.uint8)
-            contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        }
+        mask = masks[0]
+        mask = mask.astype(np.uint8)
+        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-            for idx, contour in enumerate(contours):
-                points = contour.reshape(-1, 2).tolist() 
-                shape = {
-                    "label": f"object_{idx+1}",
-                    "points": points,
-                    "group_id": None,
-                    "shape_type": "polygon",
-                    "flags": {},
-                }
-                json_data["shapes"].append(shape)
-                
+        for idx, contour in enumerate(contours):
+            points = contour.reshape(-1, 2).tolist()
+            shape = {
+                "label": f"object_{idx + 1}",
+                "points": points,
+                "group_id": None,
+                "shape_type": "polygon",
+                "flags": {},
+            }
+            json_data["shapes"].append(shape)
+
         json_path = os.path.join(self.lastOpenDir, f"{os.path.splitext(image_name)[0]}.json")
         with open(json_path, "w") as f:
             json.dump(json_data, f, indent=4)
         self.loadFile(json_path)
         self.filename = self.imagePath
-###
+
+    ###
 
     def openFile(self, _value=False):
         if not self.mayContinue():
@@ -2227,7 +2249,7 @@ class MainWindow(QtWidgets.QMainWindow):
             "You are about to permanently delete {} polygons, " "proceed anyway?"
         ).format(len(self.canvas.selectedShapes))
         if yes == QtWidgets.QMessageBox.warning(
-            self, self.tr("Attention"), msg, yes | no, yes
+                self, self.tr("Attention"), msg, yes | no, yes
         ):
             self.remLabels(self.canvas.deleteSelected())
             self.setDirty()
@@ -2287,28 +2309,26 @@ class MainWindow(QtWidgets.QMainWindow):
             # 跳过已经在 imageList 中的文件，或者文件扩展名不是支持的图像格式
             if file in self.imageList or not file.lower().endswith(tuple(extensions)):
                 continue
-            
 
-            
             # 检查对应的 label 文件
             label_file = osp.splitext(file)[0] + ".json"
             if self.output_dir:
                 label_file_without_path = osp.basename(label_file)
                 label_file = osp.join(self.output_dir, label_file_without_path)
-            
+
             # 创建 QListWidgetItem
             item = QtWidgets.QListWidgetItem(file)
             item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
-            
+
             # 如果 label 文件存在且是有效标签文件，设置为勾选状态
             if QtCore.QFile.exists(label_file) and LabelFile.is_label_file(label_file):
                 item.setCheckState(Qt.Checked)
             else:
                 item.setCheckState(Qt.Unchecked)
-            
+
             # 将项添加到文件列表控件中
             self.fileListWidget.addItem(item)
-            
+
             # 只将图像文件添加到 imageList 中
             self.imageList.append(file)
 
@@ -2323,7 +2343,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def importDirImages(self, dirpath, pattern=None, load=True):
         self.actions.openNextImg.setEnabled(True)
         self.actions.openPrevImg.setEnabled(True)
-        
+
         if not self.mayContinue() or not dirpath:
             return
 
