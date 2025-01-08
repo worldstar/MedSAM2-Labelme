@@ -331,17 +331,6 @@ After the first round of training, the model will look like this.
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-fine-tune.png" width=50%>  
 Then, you need to modify the dataset by adding some less obvious tumors and continue training using the fine-tuned MedSAM2.  
 
-## MedSAM2 Automatic
-We combine semi-automatic and automatic into one file.  
-You can download the `app.py` in `MedSAM2-auto`,but now the MedSAM2_pretrain is not enough to support accuracy of automatic.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-combine.png" width=100%>  
-
-### Usage
-Click on [Automatic Annotation], then wait for a period of time. The duration depends on your device.  
-After the model completes the automatic annotation, it will automatically move to the next image.  
-This is a demonstration using MedSAM2 without fine-tuning, so it is normal for the accuracy to be low.    
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-auto.gif" width=100%>
-
 ## Acknowledgement
 
 This repo is the fork of [mpitid/pylabelme](https://github.com/mpitid/pylabelme).
