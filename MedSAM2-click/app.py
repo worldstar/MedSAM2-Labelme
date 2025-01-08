@@ -239,7 +239,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.tr("Quit application"),
         )
         open_ = action(
-            self.tr("&開啟\n"),
+            self.tr("&Open\n"),
             self.openFile,
             shortcuts["open"],
             "open",
@@ -254,8 +254,11 @@ class MainWindow(QtWidgets.QMainWindow):
         )
 ### medsam2
         medsam2 = action(
-            self.tr("&medsam2\n"),
-            self.medsam2
+            self.tr("&Semi-automatic\nsegmentation"),
+            self.medsam2,
+            shortcuts["semi_med"],
+            "medical",
+            self.tr("Semi-automatic segmentation using MedSAM2"),
         )
 ###
         openNextImg = action(
