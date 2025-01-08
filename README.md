@@ -37,7 +37,7 @@ There are options:
 - Pre-build binaries from [the release section](https://github.com/labelmeai/labelme/releases)
 
 ### Python version
-Please use Python 3.12, check your python version  
+Please use [Python](https://www.python.org/downloads/windows/) 3.12, check your python version  
 ```bash
 python -V
 ```
