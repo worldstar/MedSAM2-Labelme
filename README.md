@@ -16,7 +16,8 @@ conda activate labelme
 labelme  # just open gui
 ```
 
-Open your image, and click medsam2 button.  
+Open your image, and click `Semi-automatic segmentation` button.  
+Or using shortcut `Ctrl + M`  
 You don't need to modify the AI model.  
 Then a red dot will appear at the location you click on the window.  
   
