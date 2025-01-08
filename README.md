@@ -17,7 +17,7 @@ labelme  # just open gui
 ```
 
 Open your image, and click `Semi-automatic segmentation` button.  
-Or using shortcut `Ctrl + M`  
+Or use the `Ctrl + M` shortcut to perform semi-automatic segmentation with MedSAM2. 
 You don't need to modify the AI model.  
 Then a red dot will appear at the location you click on the window.  
   
