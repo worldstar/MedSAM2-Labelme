@@ -1878,7 +1878,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.loadFile(self.filename)
 
         self._config["keep_prev"] = keep_prev
-
+# auto medsam2
     def automedsam2(self, _value=False, load=True):
         if torch.cuda.is_available():
             device = torch.device("cuda")
@@ -1940,7 +1940,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.loadFile(json_path)
         self.filename = self.imagePath
         # 切下一張
-        keep_prev = self._config["keep_prev"]
+        '''keep_prev = self._config["keep_prev"]
         if QtWidgets.QApplication.keyboardModifiers() == (
                 Qt.ControlModifier | Qt.ShiftModifier
         ):
@@ -1966,9 +1966,9 @@ class MainWindow(QtWidgets.QMainWindow):
         if self.filename and load:
             self.loadFile(self.filename)
 
-        self._config["keep_prev"] = keep_prev
+        self._config["keep_prev"] = keep_prev'''
 
-    ### medsam2
+    ### semi-suto medsam2
     def medsam2(self):
         if torch.cuda.is_available():
             device = torch.device("cuda")
