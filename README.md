@@ -35,6 +35,21 @@ There are options:
 - Platform specific installation: [Ubuntu](#ubuntu), [macOS](#macos), [Windows](#windows)
 - Pre-build binaries from [the release section](https://github.com/labelmeai/labelme/releases)
 
+### Python version
+Please use Python 3.12, check your python version  
+```bash
+python -V
+```
+If your Python version is not 3.12,  
+```bash
+# Anaconda
+conda install python=3.12
+# Ubuntu
+sudo apt install python3.12
+# pip
+pip install python==3.12.6
+```
+
 ### Anaconda
 
 You need install [Anaconda](https://www.continuum.io/downloads), then run below:
