@@ -21,21 +21,17 @@ Open your image folder, and click `Semi-automatic segmentation` button.
 Or use the `Ctrl + M` shortcut to perform semi-automatic segmentation with MedSAM2. 
 You don't need to modify the AI model.  
 Then a red dot will appear at the location you click on the window.  
-  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/_2025-01-08%20111411.gif" width="100%" />
-
 Click on the window , and press Enter after finishing.  
 
 ### Automatic segmentation
 Open your image folder, and click `Automatic segmentation` button.  
 Or use the `Ctrl + Shift + M` shortcut to perform automatic segmentation with MedSAM2. 
 You don't need to modify the AI model. 
-
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/_2025-01-08%20112905.gif" width=100%>
 
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
-  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/screen%202025-01-08%20112424.png" width="100%" />
 
 ## Installation
