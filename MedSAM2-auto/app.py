@@ -255,12 +255,18 @@ class MainWindow(QtWidgets.QMainWindow):
         )
         ### medsam2
         automedsam2 = action(
-            self.tr("&自動標註\n"),
+            self.tr("&Automatic\nsegmentation"),
             self.automedsam2,
+            shortcuts["auto_med"],
+            "medical",
+            self.tr("Automatic segmentation using MedSAM2"),
         )
         medsam2 = action(
-            self.tr("&手動標注\n"),
-            self.medsam2
+            self.tr("&Semi-automatic\nsegmentation"),
+            self.medsam2,
+            shortcuts["semi_med"],
+            "medical",
+            self.tr("Semi-automatic segmentation using MedSAM2"),
         )
         ###
         openNextImg = action(
