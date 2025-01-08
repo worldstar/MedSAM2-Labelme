@@ -111,9 +111,9 @@ pip install labelme
 pip3 install git+https://github.com/labelmeai/labelme
 ```
 
-## Setup MedSAM2 semi-automatic
+## Setup MedSAM2
 
-Move the files inside MedSAM2-click to `anaconda3\envs\labelme\Lib\site-packages\labelme`, and replace the old `app.py` with the new `app.py` .
+Move the files inside MedSAM2-click to `anaconda3/envs/labelme/Lib/site-packages/labelme`, and replace the old `app.py` with the new `app.py` .
 
 You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2-click/checkpoints`:
 ```bash
@@ -121,8 +121,19 @@ bash download_ckpts.sh
 
 #or you can open download_ckpt.sh then copy the url and download on your browser.
 ```
-Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaconda3\envs\labelme\Lib\site-packages\labelme\checkpoints`.  
+Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints`.  
 If you can't find it, make good use of the file manager's search function.  
+
+### Set shortcuts
+In folder `anaconda3/envs/labelme/Lib/site-packages/labelme/config/default_config.yaml`  
+Add these two lines of code at the end.  
+```bash
+  auto_med: Ctrl+Shift+M
+  semi_med: Ctrl+M
+```
+
+### Set Icons
+Download icons `medical.png` in our folder `MedSAM2-auto/icons`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/icons`.
 
 ### After downloading the checkpoint
 You need to open `app.py`, and update the path to the checkpoint file, which is around line 1883.  
