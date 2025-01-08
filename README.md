@@ -141,7 +141,7 @@ bash download_ckpts.sh
 #or you can open download_ckpt.sh then copy the url and download on your browser.
 ```
 Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints`.  
-If you can't find it, make good use of the file manager's search function.  
+### If you can't find it, make good use of the file manager's search function.  
 
 ### Set shortcuts
 In folder `anaconda3/envs/labelme/Lib/site-packages/labelme/config/default_config.yaml`  
