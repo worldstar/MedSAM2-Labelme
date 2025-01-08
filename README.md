@@ -36,6 +36,14 @@ It will automatically save a JSON file, and the file will be named as `filename.
 
 ## Installation
 
+### Our environment
+```bash
+Windows
+Python3.12.6
+Torch 2.5.1
+CUDA 12.4
+```
+
 There are options:
 
 - Platform agnostic installation: [Anaconda](#anaconda)
@@ -117,8 +125,13 @@ pip install labelme
 pip3 install git+https://github.com/labelmeai/labelme
 ```
 
-## Setup MedSAM2
+## Download Pytoch
+We need to use [Pytorch](https://pytorch.org/) gpu version
+```bash
+conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+```
 
+## Setup MedSAM2
 Move the files inside `MedSAM2`(our folder) to `anaconda3/envs/labelme/Lib/site-packages/labelme`, and replace the old `app.py` with the new `app.py` .
 
 You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2-click/checkpoints`:
@@ -144,12 +157,6 @@ Download icons `medical.png` in our folder `MedSAM2-auto/icons`, then place it i
 ### After downloading the checkpoint
 You need to open `app.py`, and update the path to the checkpoint file, which is around line 1883.  
 It is recommended to use an absolute path to ensure no errors occur.
-
-### Download Pytoch
-We need to use [Pytorch](https://pytorch.org/) gpu version
-```bash
-conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
-```
 
 ## Some possible errors  
 ### You might encounter this Qt error on Windows 11.  
