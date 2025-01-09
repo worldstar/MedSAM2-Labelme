@@ -1,8 +1,7 @@
 ## MedSAM2 within Labelme  
 
 We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform breast cancer image segmentation.  
-MedSAM2 achieves better performance in medical image segmentation.  
-
+MedSAM2 achieves better performance in medical image segmentation. Based on this, we performed fine-tuning.  
   
 
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main%20window.png" width=100%>
