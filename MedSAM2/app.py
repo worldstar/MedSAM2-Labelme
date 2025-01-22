@@ -2005,6 +2005,7 @@ class MainWindow(QtWidgets.QMainWindow):
         cv2.setMouseCallback("image", on_ELENT_LBUTTONDOWN)
         cv2.imshow("image", opened_image)
         cv2.waitKey(0)
+        cv2.destroyAllWindows()
         '''input_point = np.array([[x_axis[i], y_axis[i]] for i in range(len(x_axis))])
         input_label = np.ones(len(x_axis), dtype=int)'''
 
