@@ -30,7 +30,7 @@ In semi-automatic segmentation for consecutive images, pressing "Enter" will all
 Open your image folder, and click `Automatic segmentation` button.  
 Or use the `Ctrl + Shift + M` shortcut to perform automatic segmentation with MedSAM2. 
 You don't need to modify the AI model. 
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/_2025-01-08%20112905.gif" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto_medsam2.gif" width=100%>
 
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
