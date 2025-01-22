@@ -2026,8 +2026,6 @@ class MainWindow(QtWidgets.QMainWindow):
                 "old_input_point": old_input_point,
                 "old_input_label": old_input_label,
             }
-            with open(global_data_file, "w") as f:
-                json.dump(data, f)
         # 判斷有沒有新的point
         if x_axis and y_axis:
             input_point = np.array([[x_axis[i], y_axis[i]] for i in range(len(x_axis))])
