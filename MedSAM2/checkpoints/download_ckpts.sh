@@ -6,6 +6,7 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
+# checkpoint download url " https://huggingface.co/jiayuanz3/MedSAM2_pretrain/resolve/main/MedSAM2_pretrain.pth "
 
 # Define the URLs for the checkpoints
 BASE_URL="https://huggingface.co/jiayuanz3/MedSAM2_pretrain/resolve/main/"
