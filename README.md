@@ -99,7 +99,7 @@ pip3 install git+https://github.com/labelmeai/labelme
 ```
 
 ### macOS
-
+You might encounter some issues because our development team has not used macOS.  
 ```bash
 brew install pyqt  # maybe pyqt5
 pip install labelme
@@ -143,6 +143,7 @@ bash download_ckpts.sh
 #or you can open download_ckpt.sh then copy the url and download on your browser.
 ```
 Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints`.  
+
 ### If you can't find it, make good use of the file manager's search function.  
 
 ### Set shortcuts
@@ -156,8 +157,12 @@ Add these two lines of code at the end.
 ### Set Icons
 Download icons `medical.png` in our folder `MedSAM2-auto/icons`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/icons`.
 
-### After downloading the checkpoint
-You need to open `app.py`, and update the path to the checkpoint file, which is around line 1883.  
+### You need to change the path
+Open `app.py`.
+```bash
+Update the path to the checkpoint file, which is around line 1891 and line 1985.  
+Update the path to the global_data.json, which is around line 2011.
+```
 It is recommended to use an absolute path to ensure no errors occur.
 
 ## Some possible errors  
