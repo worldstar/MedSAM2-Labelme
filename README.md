@@ -160,8 +160,8 @@ Download icons `medical.png` in our folder `MedSAM2-auto/icons`, then place it i
 ### You need to change the path
 Open `app.py`.
 ```bash
-Update the path to the checkpoint file, which is around line 1891 and line 259, line 266, line 273.  
-Update the path to the global_data.json, which is around line 2012.
+Update the path to the checkpoint file, which is around line 259, line 266, line 273.  
+Update the path to the global_data.json, which is around line 267, line 275.
 ```
 It is recommended to use an absolute path to ensure no errors occur.
 
