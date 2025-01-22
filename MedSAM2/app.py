@@ -263,14 +263,16 @@ class MainWindow(QtWidgets.QMainWindow):
         )
         medsam2 = action(
             self.tr("&Semi-automatic\nsegmentation\n(DCE,DWI,PET)"),
-            lambda: self.medsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint.pt"),
+            lambda: self.medsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint.pt",
+                                 globa_data_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/global_data.json"),
             shortcuts["semi_med"],
             "medical",
             self.tr("Semi-automatic segmentation using MedSAM2,\ncan perform DCE,DWI,PET medical image segmentation"),
         )
         medsam2_adc = action(
             self.tr("&Semi-automatic\nsegmentation\n(ADC)"),
-            lambda: self.medsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint_adc.pt"),
+            lambda: self.medsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint_adc.pt",
+                                 globa_data_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/global_data.json"),
             shortcuts["semi_med_adc"],
             "medical",
             self.tr("Semi-automatic segmentation using MedSAM2,\ncan perform ADC medical image segmentation"),
@@ -1977,7 +1979,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     ### semi-suto medsam2
     ### pressing "Enter" will allow the use of points from the previous image.
-    def medsam2(self, checkpoint_path=None):
+    def medsam2(self, checkpoint_path=None, global_data_path=None):
         if torch.cuda.is_available():
             device = torch.device("cuda")
         elif torch.backends.mps.is_available():
@@ -2016,7 +2018,7 @@ class MainWindow(QtWidgets.QMainWindow):
         '''input_point = np.array([[x_axis[i], y_axis[i]] for i in range(len(x_axis))])
         input_label = np.ones(len(x_axis), dtype=int)'''
 
-        global_data_file = 'D:/anaconda3/envs/labelme/Lib/site-packages/labelme/global_data.json'
+        global_data_file = global_data_path
         # 初始化變數
         old_input_point = None
         old_input_label = None
