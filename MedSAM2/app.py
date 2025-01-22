@@ -1969,7 +1969,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._config["keep_prev"] = keep_prev'''
 
     ### semi-suto medsam2
-    ### 如果point的點不需要更換-》直接enter
+    ### pressing "Enter" will allow the use of points from the previous image.
     def medsam2(self):
         if torch.cuda.is_available():
             device = torch.device("cuda")
