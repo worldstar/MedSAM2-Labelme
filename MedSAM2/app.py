@@ -1969,6 +1969,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._config["keep_prev"] = keep_prev'''
 
     ### semi-suto medsam2
+    ### 如果point的點不需要更換-》直接enter
     def medsam2(self):
         if torch.cuda.is_available():
             device = torch.device("cuda")
@@ -1976,13 +1977,13 @@ class MainWindow(QtWidgets.QMainWindow):
             device = torch.device("mps")
         else:
             device = torch.device("cpu")
-        print(f"using device: {device}")
+        print(f"using device: {device}, please click.")
 
         root = tk.Tk()
         root.withdraw()
 
-        checkpoint = "D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/MedSAM2_pretrain.pth"
-        model_cfg = "sam2_hiera_t.yaml"
+        checkpoint = "D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint.pt"
+        model_cfg = "sam2.1_hiera_b+.yaml"
         sam2 = build_sam2(model_cfg, checkpoint, device="cuda")
         # mask_generator = SAM2AutomaticMaskGenerator(sam2)
         predictor = SAM2ImagePredictor(sam2)
@@ -1990,6 +1991,7 @@ class MainWindow(QtWidgets.QMainWindow):
         predictor.set_image(opened_image)
         x_axis = []
         y_axis = []
+
 
         def on_ELENT_LBUTTONDOWN(event, x, y, flags, param):
             if event == cv2.EVENT_LBUTTONDOWN:
@@ -2003,14 +2005,47 @@ class MainWindow(QtWidgets.QMainWindow):
         cv2.setMouseCallback("image", on_ELENT_LBUTTONDOWN)
         cv2.imshow("image", opened_image)
         cv2.waitKey(0)
-        input_point = np.array([[x_axis[i], y_axis[i]] for i in range(len(x_axis))])
-        input_label = np.ones(len(x_axis), dtype=int)
+        '''input_point = np.array([[x_axis[i], y_axis[i]] for i in range(len(x_axis))])
+        input_label = np.ones(len(x_axis), dtype=int)'''
+
+        global_data_file = 'D:/anaconda3/envs/labelme/Lib/site-packages/labelme/global_data.json'
+        # 初始化變數
+        old_input_point = None
+        old_input_label = None
+
+        # 加載全域變數
+        if os.path.exists(global_data_file):
+            with open(global_data_file, "r") as f:
+                data = json.load(f)
+                old_input_point = data.get("old_input_point")
+                old_input_label = data.get("old_input_label")
+
+        # 保存全域變數到文件
+        def save_global_vars():
+            data = {
+                "old_input_point": old_input_point,
+                "old_input_label": old_input_label,
+            }
+            with open(global_data_file, "w") as f:
+                json.dump(data, f)
+        # 判斷有沒有新的point
+        if x_axis and y_axis:
+            input_point = np.array([[x_axis[i], y_axis[i]] for i in range(len(x_axis))])
+            input_label = np.ones(len(x_axis), dtype=int)
+            # 更新全域變數並保存到文件
+            old_input_point = input_point.tolist()  # 轉換為列表以存儲為 JSON
+            old_input_label = input_label.tolist()
+            save_global_vars()
+        else:
+            input_point = np.array(old_input_point) if old_input_point else None
+            input_label = np.array(old_input_label) if old_input_label else None
 
         masks, scores, _ = predictor.predict(
             point_coords=input_point,
             point_labels=input_label,
             multimask_output=False,
         )
+        
         # 存成json檔
         image_name = self.filename
         json_data = {
