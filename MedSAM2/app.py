@@ -256,17 +256,24 @@ class MainWindow(QtWidgets.QMainWindow):
         ### medsam2
         automedsam2 = action(
             self.tr("&Automatic\nsegmentation"),
-            self.automedsam2,
+            lambda: self.automedsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/medsam2_pre_dce.pt"),
             shortcuts["auto_med"],
             "medical",
             self.tr("Automatic segmentation using MedSAM2"),
         )
         medsam2 = action(
-            self.tr("&Semi-automatic\nsegmentation"),
-            self.medsam2,
+            self.tr("&Semi-automatic\nsegmentation\n(DCE,DWI,PET)"),
+            lambda: self.medsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint.pt"),
             shortcuts["semi_med"],
             "medical",
-            self.tr("Semi-automatic segmentation using MedSAM2"),
+            self.tr("Semi-automatic segmentation using MedSAM2,\ncan perform DCE,DWI,PET medical image segmentation"),
+        )
+        medsam2_adc = action(
+            self.tr("&Semi-automatic\nsegmentation\n(ADC)"),
+            lambda: self.medsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint_adc.pt"),
+            shortcuts["semi_med_adc"],
+            "medical",
+            self.tr("Semi-automatic segmentation using MedSAM2,\ncan perform ADC medical image segmentation"),
         )
         ###
         openNextImg = action(
@@ -1879,7 +1886,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self._config["keep_prev"] = keep_prev
 # auto medsam2
-    def automedsam2(self, _value=False, load=True):
+    def automedsam2(self, _value=False, load=True, checkpoint_path=None):
         if torch.cuda.is_available():
             device = torch.device("cuda")
         elif torch.backends.mps.is_available():
@@ -1888,7 +1895,7 @@ class MainWindow(QtWidgets.QMainWindow):
             device = torch.device("cpu")
         print(f"using device: {device}")
         # 初始化模型
-        checkpoint = "D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/MedSAM2_pretrain.pth"
+        checkpoint = checkpoint_path
         model_cfg = "sam2_hiera_t.yaml"
         sam2 = build_sam2(model_cfg, checkpoint, device="cuda")
         mask_generator = SAM2AutomaticMaskGenerator(sam2)
@@ -1970,7 +1977,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     ### semi-suto medsam2
     ### pressing "Enter" will allow the use of points from the previous image.
-    def medsam2(self):
+    def medsam2(self, checkpoint_path=None):
         if torch.cuda.is_available():
             device = torch.device("cuda")
         elif torch.backends.mps.is_available():
@@ -1982,7 +1989,7 @@ class MainWindow(QtWidgets.QMainWindow):
         root = tk.Tk()
         root.withdraw()
 
-        checkpoint = "D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint.pt"
+        checkpoint = checkpoint_path
         model_cfg = "sam2.1_hiera_b+.yaml"
         sam2 = build_sam2(model_cfg, checkpoint, device="cuda")
         # mask_generator = SAM2AutomaticMaskGenerator(sam2)
