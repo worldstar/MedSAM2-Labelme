@@ -22,6 +22,8 @@ Or use the `Ctrl + M` shortcut to perform semi-automatic segmentation with MedSA
 Then a red dot will appear at the location you click on the window.  
 Click on the window , and press Enter after finishing. 
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/_2025-01-08%20111411.gif" width="100%" />
+### Continuous images
+In semi-automatic segmentation for consecutive images, pressing "Enter" will allow the use of points from the previous image.  
 
 ### Automatic segmentation
 Open your image folder, and click `Automatic segmentation` button.  
