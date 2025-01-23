@@ -269,14 +269,14 @@ class MainWindow(QtWidgets.QMainWindow):
             "medical",
             self.tr("Semi-automatic segmentation using MedSAM2,\ncan perform DCE,DWI,PET medical image segmentation"),
         )
-        medsam2_adc = action(
+        '''medsam2_adc = action(
             self.tr("&Semi-automatic\nsegmentation\n(ADC)"),
             lambda: self.medsam2(checkpoint_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints/checkpoint_adc.pt",
                                  globa_data_path="D:/anaconda3/envs/labelme/Lib/site-packages/labelme/global_data.json"),
             shortcuts["semi_med_adc"],
             "medical",
             self.tr("Semi-automatic segmentation using MedSAM2,\ncan perform ADC medical image segmentation"),
-        )
+        )'''
         ###
         openNextImg = action(
             self.tr("&Next Image"),
