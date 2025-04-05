@@ -169,7 +169,7 @@ If you can't find it, make good use of the file manager's search function.
 We will upload the fine-tuned multimodal segmentation model later.
 
 ### Set Icons
-Download icons `medical.png` in our folder `MedSAM2-auto/icons`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/icons`.
+Download icons in our folder `MedSAM2/icons`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/icons`.
 
 ### You need to change the path
 Open `app.py`.
