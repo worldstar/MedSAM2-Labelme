@@ -37,14 +37,14 @@ This mode provides a button labeled "Batch" or the "Esc" key on the keyboard as 
 Open your image folder, and click 'ONE IMAGE(AUTO)' button or 'ENTIRE FOLDER(AUTO)'.  
 You don't need to modify the AI model. 'ONE IMAGE (AUTO)' is for segmenting the current image, while 'ENTIRE FOLDER (AUTO)' is for segmenting all images in the current folder, with the segmentation progress displayed in the terminal.  
 The fully automated segmentation supports ADC, DCE, DWI, and PET images, but currently, it does not support cardiac ultrasound images.  
-ADC
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=100%>
-DCE
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=100%>
-DWI
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=100%>
-PET
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=100%>
+ADC(Apparent Diffusion Coefficient):  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=80%>
+DCE(Dynamic Contrast-Enhanced):  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=80%>
+DWI(Diffusion Weighted Imaging):  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=80%>
+PET(Positron Emission Tomography):  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=80%>
 
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
