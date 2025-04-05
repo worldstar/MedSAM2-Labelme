@@ -53,7 +53,9 @@ Before using `Select Background` ：
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.png" width="70%">  
 </div>
+
 After using `Select Background` ：  
+
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="70%">  
 </div>
@@ -238,7 +240,9 @@ You just need to use pip or conda to install the corresponding module.
 
 We need to use [roboflow](https://roboflow.com/).  
 Roboflow supports exporting segmentation datasets to the SAM-2.1 format, ideal for use in this guide. You can upload segmentation datasets in the COCO JSON Segmentation format then convert them to SAM-2.1 for use in this guide.  
-<img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/sam2export.png">
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/sam2export.png" width='70%'>
+</div>
 We then download a SAM-2.1 training YAML file which we will use to configure our model training job.
 
 Finally, we install SAM-2.1 and download the model checkpoints.
