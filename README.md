@@ -48,14 +48,14 @@ Open your image folder, and click `ONE IMAGE(AUTO)` button or `ENTIRE FOLDER(AUT
 `ONE IMAGE (AUTO)` is for segmenting the current image, while `ENTIRE FOLDER (AUTO)` is for segmenting all images in the current folder, with the segmentation progress displayed in the terminal.  
 The fully automated segmentation supports ADC, DCE, DWI, and PET images, but currently, it does not support cardiac ultrasound images.  
 
-## Demonstration of Automatic mode
-### ADC(Apparent Diffusion Coefficient):  
+### Demonstration of Automatic mode
+ADC(Apparent Diffusion Coefficient):  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=100%>  
-### DCE(Dynamic Contrast-Enhanced):  
+DCE(Dynamic Contrast-Enhanced):  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=100%>  
-### DWI(Diffusion Weighted Imaging):  
+DWI(Diffusion Weighted Imaging):  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=100%>  
-### PET(Positron Emission Tomography):  
+PET(Positron Emission Tomography):  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=100%>  
 
 ### Save json file
