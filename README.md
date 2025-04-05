@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/raw_1.png" width='50%'><br/>labelme
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/raw_1.png" width='20%'><br/>labelme
 </h1>
 ## MedSAM2 within Labelme   
 Our goal is to significantly reduce the time doctors spend annotating images and make the tool accessible for non-professional users as well.  
