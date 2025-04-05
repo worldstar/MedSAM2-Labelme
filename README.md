@@ -41,8 +41,8 @@ This mode provides a button labeled `BATCH TASK(CLICK)` or the `Esc` key on the 
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="100%" />  
 
 ### Automatic mode : ONE IMAGE(AUTO) or ENTIRE FOLDER(AUTO)
-Open your image folder, and click 'ONE IMAGE(AUTO)' button or 'ENTIRE FOLDER(AUTO)'.  
-You don't need to modify the AI model. 'ONE IMAGE (AUTO)' is for segmenting the current image, while 'ENTIRE FOLDER (AUTO)' is for segmenting all images in the current folder, with the segmentation progress displayed in the terminal.  
+Open your image folder, and click `ONE IMAGE(AUTO)` button or `ENTIRE FOLDER(AUTO)`.  
+`ONE IMAGE (AUTO)` is for segmenting the current image, while `ENTIRE FOLDER (AUTO)` is for segmenting all images in the current folder, with the segmentation progress displayed in the terminal.  
 The fully automated segmentation supports ADC, DCE, DWI, and PET images, but currently, it does not support cardiac ultrasound images.  
 ADC(Apparent Diffusion Coefficient):  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=100%>  
