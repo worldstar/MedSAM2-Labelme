@@ -4,7 +4,7 @@ We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to p
 MedSAM2 achieves better performance in medical image segmentation. Based on this, we performed fine-tuning.  
   
 
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main%20window.png" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main-windows.png" width=100%>
 
 ## Usage
 
@@ -14,6 +14,10 @@ Run `labelme --help` for detail.
 conda activate labelme
 labelme  # just open gui
 ```
+
+### Mode Selection
+We offer four mode options: two fully automated and two semi-automated. The fully automated modes are divided into single image and entire folder, while the semi-automated modes are divided into batch processing tasks and general mode.
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/mode-select.png" width=100%>
 
 ### Semi-automatic segmentation
 You don't need to modify the AI model.  
