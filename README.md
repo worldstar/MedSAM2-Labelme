@@ -77,8 +77,7 @@ The fully automated segmentation supports ADC, DCE, DWI, and PET images, but cur
 
 ### Demonstration of Automatic mode
 
-ADC `Apparent Diffusion Coefficient` :
-<div align="center">
+<div align="center">ADC `Apparent Diffusion Coefficient`
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=70%>  
 </div>
 
