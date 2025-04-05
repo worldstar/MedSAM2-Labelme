@@ -55,7 +55,6 @@ PET(Positron Emission Tomography):
 
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/screen%202025-01-08%20112424.png" width="100%" />
 
 ## Installation
 
