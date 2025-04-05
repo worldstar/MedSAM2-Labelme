@@ -22,7 +22,7 @@ Therefore, we fine-tuned MedSAM2 based on these findings and we have now impleme
 The following interface includes button `Med-SAM2` that we have added.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main-windows.png" width=70%/>
-<div/>
+</div>div>
 
 ## Usage
 
