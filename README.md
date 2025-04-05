@@ -33,7 +33,8 @@ After using `Select Background` ：
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="100%">  
 
 ### Transfer Point for SEMI-AUTO(CLICK)
-In semi-automatic segmentation for consecutive images, pressing `Enter` will allow the use of points from the previous image.Note that the `BATCH TASK` mode does not support point passing.  
+In semi-automatic segmentation for consecutive images, pressing `Enter` will allow the use of points from the previous image.  
+Note that the `BATCH TASK` mode does not support point passing.  
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="100%">  
 
 ### Semi-automatic mode : BATCH-TASK(CLICK)
