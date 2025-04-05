@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/raw_1.png" width='20%'>
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/raw_1.png" width='15%'>
 </h1>
 
 ## MedSAM2 within Labelme   
