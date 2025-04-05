@@ -156,7 +156,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 ## Setup MedSAM2
 Move the files inside `MedSAM2`(our folder) to `anaconda3/envs/labelme/Lib/site-packages/labelme`, and replace the old `app.py` with the new `app.py` .
 
-You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2-click/checkpoints`:
+You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2-click/checkpoints`(This is the folder on our GitHub.):
 ```bash
 bash download_ckpts.sh
 
