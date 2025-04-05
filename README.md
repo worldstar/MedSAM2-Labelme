@@ -10,6 +10,10 @@
   <!-- | <a href="https://www.youtube.com/playlist?list=PLI6LvFw0iflh3o33YYnVIfOpaO0hc5Dzw"><b>Youtube FAQ</b></a> -->
 </div>
 
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/demonstration.png" width="70%">
+</div>
+
 Our goal is to significantly reduce the time doctors spend annotating images and make the tool accessible for non-professional users as well.  
 So we integrated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme)  to perform segmentation on breast cancer images and cardiac ultrasound images.  
 While MedSAM2 has shown good performance in medical image segmentation overall, our tests revealed that its performance on multimodal breast cancer images and cardiac ultrasound segmentation tasks was suboptimal.  
@@ -17,7 +21,7 @@ Therefore, we fine-tuned MedSAM2 based on these findings and we have now impleme
 The following interface includes button `Med-SAM2` that we have added.  
 
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main-windows.png" width=100%/>
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/demonstration.png" width=100%/>
+
 
 ## Usage
 
