@@ -5,7 +5,7 @@
 <div align="center">
   <a href="#installation"><b>Installation</b></a>
   | <a href="#usage"><b>Usage</b></a>
-  | <a href="#Demonstration of Automatic mode"><b>Examples</b></a>
+  | <a href="#demonstration"><b>Examples</b></a>
 </div>
 
 <div align="center">
