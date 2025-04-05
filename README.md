@@ -31,7 +31,7 @@ In semi-automatic segmentation for consecutive images, pressing "Enter" will all
 
 ### Semi-automatic mode : BATCH-TASK(CLICK)
 This mode provides a button labeled "Batch" or the "Esc" key on the keyboard as a shortcut, allowing multiple segmentations within a single image. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.mp4" width="100%" />
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="100%" />
 
 ### Automatic mode : ONE IMAGE(AUTO) or ENTIRE FOLDER(AUTO)
 Open your image folder, and click 'ONE IMAGE(AUTO)' button or 'ENTIRE FOLDER(AUTO)'.  
