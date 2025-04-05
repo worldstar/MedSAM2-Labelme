@@ -164,9 +164,7 @@ bash download_ckpts.sh
 #Please note that this is the pre-trained MedSAM2 model, not our fine-tuned version.
 ```
 Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints`.  
-
-### We will later release our fine-tuned checkpoints.
-### If you can't find it, make good use of the file manager's search function.  
+If you can't find it, make good use of the file manager's search function. We will later release our fine-tuned checkpoints.
 
 ### Set Icons
 Download icons `medical.png` in our folder `MedSAM2-auto/icons`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/icons`.
