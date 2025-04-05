@@ -345,13 +345,11 @@ Like this kind of data, where the tumor is relatively complete and clearly visib
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/IM-0023-0039.png" width=50%>  
 
 ### Dataset content
-Your dataset must include both images with tumors and images without tumors (treated as background). Otherwise, MedSAM2 might mistakenly annotate the heart.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-heart.png" width=50%>  
+Your dataset must include both images with tumors and images without tumors (treated as background).   
 
-### Training
+### AFter First Round Training
 After the first round of training, the model will look like this.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/medsam2-fine-tune.png" width=50%>  
-Then, you need to modify the dataset by adding some less obvious tumors and continue training using the fine-tuned MedSAM2.  
+Then, you can modify the dataset by adding some less obvious tumors and continue training using the fine-tuned MedSAM2.  
 
 ## Acknowledgement
 
