@@ -1,7 +1,5 @@
-## Our Goal
- Our goal is to significantly reduce the time doctors spend annotating images and make the tool accessible for non-professional users as well.  
- 
 ## MedSAM2 within Labelme   
+Our goal is to significantly reduce the time doctors spend annotating images and make the tool accessible for non-professional users as well.  
 We integrated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme)  to perform segmentation on breast cancer images and cardiac ultrasound images.  
 While MedSAM2 has shown good performance in medical image segmentation overall, our tests revealed that its performance on multimodal breast cancer images and cardiac ultrasound segmentation tasks was suboptimal.  
 Therefore, we fine-tuned MedSAM2 based on these findings and we have now implemented fully automated segmentation of multimodal breast cancer images without any human intervention.  
