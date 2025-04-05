@@ -23,15 +23,22 @@ We offer four mode options: two fully automated and two semi-automated. The full
 Click `SEMI-AUTO(CLICK)` button.
 Then a red dot will appear at the location you click on the window.  
 Click on the window , and press "Enter" after finishing. 
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="100%" />
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="80%" />
+
+### Click Noise Points for SEMI-AUTO(CLICK)
+By selecting some noise points, we can further improve the accuracy. The default mode is `Select Subject` and you can switch between the `Select Subject` and `Select Background` modes by clicking the respective buttons.  
+Before using `Select Background` ：  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.png" width="80%">
+After using `Select Background` ：  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="80%">
 
 ### Transfer Point for SEMI-AUTO(CLICK)
-In semi-automatic segmentation for consecutive images, pressing "Enter" will allow the use of points from the previous image.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="100%">
+In semi-automatic segmentation for consecutive images, pressing `Enter` will allow the use of points from the previous image.  
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="80%">
 
 ### Semi-automatic mode : BATCH-TASK(CLICK)
 This mode provides a button labeled "Batch" or the "Esc" key on the keyboard as a shortcut, allowing multiple segmentations within a single image. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="100%" />
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="80%" />
 
 ### Automatic mode : ONE IMAGE(AUTO) or ENTIRE FOLDER(AUTO)
 Open your image folder, and click 'ONE IMAGE(AUTO)' button or 'ENTIRE FOLDER(AUTO)'.  
