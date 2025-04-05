@@ -1,10 +1,10 @@
 ## MedSAM2 within Labelme  
 
-We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform breast cancer image segmentation.  
+We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform breast cancer image segmentation and cardiac ultrasound image.  
 MedSAM2 achieves better performance in medical image segmentation. Based on this, we performed fine-tuning.  
   
 
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main-windows.png" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main-windows.png" width=100%/>
 
 ## Usage
 
@@ -15,20 +15,23 @@ conda activate labelme
 labelme  # just open gui
 ```
 
-### Mode Selection
+## Mode Selection
 We offer four mode options: two fully automated and two semi-automated. The fully automated modes are divided into single image and entire folder, while the semi-automated modes are divided into batch processing tasks and general mode.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/mode-select.png" width=100%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/mode-select.png" width=100%/>
 
-### Semi-automatic segmentation
-You don't need to modify the AI model.  
-Open your image folder, and click `Semi-automatic segmentation` button.
-Or use the `Ctrl + M` shortcut to perform semi-automatic segmentation with MedSAM2.
+### Semi-automatic mode : SEMI-AUTO(CLICK)
+Click `SEMI-AUTO(CLICK)` button.
 Then a red dot will appear at the location you click on the window.  
 Click on the window , and press "Enter" after finishing. 
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/_2025-01-08%20111411.gif" width="100%" />
-### Continuous images（Semi-automatic）
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="100%" />
+
+### Transfer Point for SEMI-AUTO(CLICK)
 In semi-automatic segmentation for consecutive images, pressing "Enter" will allow the use of points from the previous image.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/old_point.gif" width="100%">
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="100%">
+
+### Semi-automatic mode : BATCH-TASK(CLICK)
+This mode provides a button labeled "Batch" or the "Esc" key on the keyboard as a shortcut, allowing multiple segmentations within a single image. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.mp4" width="100%" />
 
 ### Automatic segmentation
 Open your image folder, and click `Automatic segmentation` button.  
