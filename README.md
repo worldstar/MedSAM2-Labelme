@@ -1,7 +1,5 @@
-## MedSAM2 within Labelme  
-
-We incorporated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform breast cancer image segmentation and cardiac ultrasound image.  
-MedSAM2 achieves better performance in medical image segmentation. Based on this, we performed fine-tuning.  
+## MedSAM2 within Labelme   
+We integrated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme) to perform breast cancer image segmentation and cardiac ultrasound image segmentation. While MedSAM2 has shown improved performance in medical image segmentation, our tests revealed that it does not perform effectively on multi-modal breast cancer images and cardiac ultrasound images. Therefore, based on this, we fine-tuned MedSAM2 to address these challenges.
   
 
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main-windows.png" width=100%/>
