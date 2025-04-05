@@ -161,9 +161,11 @@ You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2-cli
 bash download_ckpts.sh
 
 #or you can open download_ckpt.sh then copy the url and download on your browser.
+#Please note that this is the pre-trained MedSAM2 model, not our fine-tuned version.
 ```
 Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaconda3/envs/labelme/Lib/site-packages/labelme/checkpoints`.  
 
+### We will later release our fine-tuned checkpoints.
 ### If you can't find it, make good use of the file manager's search function.  
 
 ### Set Icons
@@ -177,8 +179,6 @@ Update the path to the checkpoint file, which is around line 1958.
 Update the path to the global_data.json, which is around line 1981.
 ```
 It is recommended to use an absolute path to ensure no errors occur.
-
-## We will later release our fine-tuned checkpoints.
 
 ## Some possible errors  
 ### You might encounter this Qt error on Windows 11.  
