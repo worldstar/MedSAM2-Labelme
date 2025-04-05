@@ -22,7 +22,7 @@ Therefore, we fine-tuned MedSAM2 based on these findings and we have now impleme
 The following interface includes button `Med-SAM2` that we have added.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/main-windows.png" width=70%/>
-</div>div>
+</div>
 
 ## Usage
 
@@ -35,29 +35,41 @@ labelme  # just open gui
 
 ## Mode Selection
 We offer four mode options: two fully automated(`ENTIRE FOLDER`, `ONE IMAGE`) and two semi-automated(`BATCH TASK`, `GENERAL`). The fully automated modes are divided into single image and entire folder, while the semi-automated modes are divided into batch processing tasks and general mode.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/mode-select.png" width=100%/>
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/mode-select.png" width=70%/>
+</div>
 
 ### Semi-automatic mode : SEMI-AUTO(CLICK)
 Click `SEMI-AUTO(CLICK)` button.
 Then a red dot will appear at the location you click on the window.  
 Click on the window , and press `Enter` after finishing. 
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="100%" />  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="70%" />  
+</div>
 
 ### Click Noise Points for SEMI-AUTO(CLICK)
 By selecting some noise points, we can further improve the accuracy. The default mode is `Select Subject` and you can switch between the `Select Subject` and `Select Background` modes by clicking the respective buttons.  
 Before using `Select Background` ：  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.png" width="100%">  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.png" width="70%">  
+</div>
 After using `Select Background` ：  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="100%">  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="70%">  
+</div>
 
 ### Transfer Point for SEMI-AUTO(CLICK)
 In semi-automatic segmentation for consecutive images, pressing `Enter` will allow the use of points from the previous image.  
 Note that the `BATCH TASK` mode does not support point passing.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="100%">  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="70%">  
+</div>
 
 ### Semi-automatic mode : BATCH-TASK(CLICK)
 This mode provides a button labeled `BATCH TASK(CLICK)` or the `Esc` key on the keyboard as a shortcut, allowing multiple segmentations within a single image. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="100%" />  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="70%" />  
+</div>
 
 ### Automatic mode : ONE IMAGE(AUTO) and ENTIRE FOLDER(AUTO)
 Open your image folder, and click `ONE IMAGE(AUTO)` button or `ENTIRE FOLDER(AUTO)` button.  
@@ -66,13 +78,21 @@ The fully automated segmentation supports ADC, DCE, DWI, and PET images, but cur
 
 ### Demonstration of Automatic mode
 ADC `Apparent Diffusion Coefficient` :  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=100%>  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=70%>  
+</div>
 DCE `Dynamic Contrast-Enhanced` :  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=100%>  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=70%>  
+</div>
 DWI `Diffusion Weighted Imaging` :  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=100%>  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=70%>  
+</div>
 PET `Positron Emission Tomography` :  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=100%>  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=70%>  
+</div>
 
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
