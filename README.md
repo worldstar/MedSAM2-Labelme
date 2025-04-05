@@ -83,14 +83,17 @@ ADC `Apparent Diffusion Coefficient` :
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=70%>  
 </div>
+
 DCE `Dynamic Contrast-Enhanced` :  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=70%>  
 </div>
+
 DWI `Diffusion Weighted Imaging` :  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=70%>  
 </div>
+
 PET `Positron Emission Tomography` :  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=70%>  
