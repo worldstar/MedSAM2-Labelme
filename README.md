@@ -22,7 +22,7 @@ We offer four mode options: two fully automated and two semi-automated. The full
 ### Semi-automatic mode : SEMI-AUTO(CLICK)
 Click `SEMI-AUTO(CLICK)` button.
 Then a red dot will appear at the location you click on the window.  
-Click on the window , and press "Enter" after finishing. 
+Click on the window , and press `Enter` after finishing. 
 <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="100%" />  
 
 ### Click Noise Points for SEMI-AUTO(CLICK)
