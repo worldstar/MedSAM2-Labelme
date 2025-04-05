@@ -148,7 +148,7 @@ pip3 install git+https://github.com/labelmeai/labelme
 ```
 
 ## Download Pytoch
-We need to use [Pytorch](https://pytorch.org/) gpu version
+We need to use [Pytorch](https://pytorch.org/) ,select your version and download it.
 ```bash
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 ```
