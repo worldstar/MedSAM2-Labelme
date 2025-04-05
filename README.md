@@ -23,35 +23,35 @@ We offer four mode options: two fully automated and two semi-automated. The full
 Click `SEMI-AUTO(CLICK)` button.
 Then a red dot will appear at the location you click on the window.  
 Click on the window , and press "Enter" after finishing. 
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="80%" />
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="80%" />  
 
 ### Click Noise Points for SEMI-AUTO(CLICK)
 By selecting some noise points, we can further improve the accuracy. The default mode is `Select Subject` and you can switch between the `Select Subject` and `Select Background` modes by clicking the respective buttons.  
 Before using `Select Background` ：  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.png" width="80%">
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.png" width="80%">  
 After using `Select Background` ：  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="80%">
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="80%">  
 
 ### Transfer Point for SEMI-AUTO(CLICK)
 In semi-automatic segmentation for consecutive images, pressing `Enter` will allow the use of points from the previous image.  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="80%">
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="80%">  
 
 ### Semi-automatic mode : BATCH-TASK(CLICK)
 This mode provides a button labeled "Batch" or the "Esc" key on the keyboard as a shortcut, allowing multiple segmentations within a single image. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="80%" />
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="80%" />  
 
 ### Automatic mode : ONE IMAGE(AUTO) or ENTIRE FOLDER(AUTO)
 Open your image folder, and click 'ONE IMAGE(AUTO)' button or 'ENTIRE FOLDER(AUTO)'.  
 You don't need to modify the AI model. 'ONE IMAGE (AUTO)' is for segmenting the current image, while 'ENTIRE FOLDER (AUTO)' is for segmenting all images in the current folder, with the segmentation progress displayed in the terminal.  
 The fully automated segmentation supports ADC, DCE, DWI, and PET images, but currently, it does not support cardiac ultrasound images.  
 ADC(Apparent Diffusion Coefficient):  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=80%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-adc.gif" width=80%>  
 DCE(Dynamic Contrast-Enhanced):  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=80%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dce.gif" width=80%>  
 DWI(Diffusion Weighted Imaging):  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=80%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-dwi.gif" width=80%>  
 PET(Positron Emission Tomography):  
-<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=80%>
+<img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=80%>  
 
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
@@ -167,24 +167,19 @@ Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaco
 
 ### If you can't find it, make good use of the file manager's search function.  
 
-### Set shortcuts
-In folder `anaconda3/envs/labelme/Lib/site-packages/labelme/config/default_config.yaml`  
-Add these two lines of code at the end.  
-```bash
-  auto_med: Ctrl+Shift+M
-  semi_med: Ctrl+M
-```
-
 ### Set Icons
 Download icons `medical.png` in our folder `MedSAM2-auto/icons`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/icons`.
 
 ### You need to change the path
 Open `app.py`.
 ```bash
-Update the path to the checkpoint file, which is around line 259, line 266, line 273.  
-Update the path to the global_data.json, which is around line 267, line 275.
+Update the path to the icons, which is around line 1904.
+Update the path to the checkpoint file, which is around line 1958.  
+Update the path to the global_data.json, which is around line 1981.
 ```
 It is recommended to use an absolute path to ensure no errors occur.
+
+## We will later release our fine-tuned checkpoints.
 
 ## Some possible errors  
 ### You might encounter this Qt error on Windows 11.  
