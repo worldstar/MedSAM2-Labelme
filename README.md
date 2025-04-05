@@ -1,6 +1,7 @@
 <h1 align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/raw_1.png" width='20%'><br/>labelme
 </h1>
+
 ## MedSAM2 within Labelme   
 Our goal is to significantly reduce the time doctors spend annotating images and make the tool accessible for non-professional users as well.  
 So we integrated MedSAM2 into [Labelme](https://github.com/wkentaro/labelme)  to perform segmentation on breast cancer images and cardiac ultrasound images.  
