@@ -211,17 +211,8 @@ Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaco
 If you can't find it, make good use of the file manager's search function.  
 We will upload the fine-tuned multimodal segmentation model later.
 
-### Set Icons
-Download icons in our folder `MedSAM2/icons`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/icons`.
-
-### You need to change the path
-Open `app.py`.
-```bash
-Update the path to the icons, which is around line 1904.
-Update the path to the checkpoint file, which is around line 1958.  
-Update the path to the global_data.json, which is around line 1981.
-```
-It is recommended to use an absolute path to ensure no errors occur.
+### Move some Folders and Files
+Download all files in our github folder `MedSAM2`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/`.
 
 ## Some possible errors  
 ### You might encounter this Qt error on Windows 11.  
