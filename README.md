@@ -28,7 +28,8 @@ Run `labelme --help` for detail.
 
 ```bash
 conda activate labelme
-labelme  # just open gui
+labelme
+# just open gui
 ```
 
 ## Mode Selection
