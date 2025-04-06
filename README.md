@@ -5,6 +5,7 @@
 <div align="center">
   <a href="#installation"><b>Installation</b></a>
   | <a href="#usage"><b>Usage</b></a>
+  | <a href="#setup"><b>Setup</b></a>
 </div>
 </br>
 <div align="center">
@@ -197,8 +198,8 @@ We need to use [Pytorch](https://pytorch.org/) ,select your version and download
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 ```
 
-## Setup MedSAM2
-Move the files inside `MedSAM2`(our folder) to `anaconda3/envs/labelme/Lib/site-packages/labelme`, and replace the old `app.py` with the new `app.py` .
+## Setup
+Move all files inside `MedSAM2`(our folder) to `anaconda3/envs/labelme/Lib/site-packages/labelme`, and replace the `original file` with the `new file` .
 
 You can download MedSAM2_pretrain checkpoint from checkpoints folder`MedSAM2/checkpoints`(This is the folder on our GitHub.):
 ```bash
@@ -211,8 +212,6 @@ Then, move the downloaded checkpoint `MedSAM2_pretrain.pth` to the folder `anaco
 If you can't find it, make good use of the file manager's search function.  
 We will upload the fine-tuned multimodal segmentation model later.
 
-### Move some Folders and Files
-Download all files in our github folder `MedSAM2`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/`.
 
 ## Some possible errors  
 ### You might encounter this Qt error on Windows.  
