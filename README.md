@@ -215,7 +215,7 @@ We will upload the fine-tuned multimodal segmentation model later.
 Download all files in our github folder `MedSAM2`, then place it into the folder`anaconda3/envs/labelme/Lib/site-packages/labelme/`.
 
 ## Some possible errors  
-### You might encounter this Qt error on Windows 11.  
+### You might encounter this Qt error on Windows.  
 <img src="https://github.com/worldstar/MedSAM2-labelme/blob/main/examples/medsam2/error1.png"/>  
 You need to rename the `Qt5` folder to `Qt` in the `anaconda3/envs/labelme/Library/qml/` directory.
   
