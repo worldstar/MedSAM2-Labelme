@@ -35,7 +35,7 @@ labelme
 ## Mode Selection
 We offer four mode options: two fully automated(`ENTIRE FOLDER`, `ONE IMAGE`) and two semi-automated(`BATCH TASK`, `GENERAL`). The fully automated modes are divided into single image and entire folder, while the semi-automated modes are divided into batch processing tasks and general mode.
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/mode-select.png" width=70%/>
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/modeselect.png" width=70%/>
 </div>
 
 ### Semi-automatic mode : SEMI-AUTO(CLICK)
