@@ -105,6 +105,12 @@ PET `Positron Emission Tomography` :
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=70%>  
 </div>
 
+### Demonstration of cardiac ultrasound image segmentation
+In general usage, label names are automatically generated based on the user-specified label name entered in the input field. In contrast, the DLC-HEART mode, which is specifically designed for cardiac ultrasound imaging, invokes an additional specialized model to improve segmentation accuracy compared to the general-purpose model. In this mode, the generated label names correspond to anatomical structures: RA (Right Atrium), LA (Left Atrium), RV (Right Ventricle), and LV (Left Ventricle).
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/auto-pet.gif" width=70%>  
+</div>
+
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
 
