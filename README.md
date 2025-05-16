@@ -9,7 +9,7 @@
 </div>
 </br>
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/demonstration.png" width="70%">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/demonstration1.png" width="70%">
 </div>
 
 ## Description
