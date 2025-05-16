@@ -33,7 +33,8 @@ labelme
 ```
 
 ## Mode Selection
-The segmentation system is divided into four modes based on single-image and multi-image processing. Multi-image processing supports an automatic segmentation mode, while single-image processing offers an automatic mode, a semi-automatic single segmentation region mode, and a semi-automatic multi segmentation region mode.
+The segmentation system is divided into four modes based on single-image and multi-image processing. Multi-image processing supports an automatic segmentation mode, while single-image processing offers an automatic mode, a semi-automatic single segmentation region mode, and a semi-automatic multi segmentation region mode.  
+All semi-automatic segmentation modes support four types of breast cancer imaging modalities (ADC, DCE, DWI, PET) as well as cardiac ultrasound image segmentation. In contrast, all automatic modes are limited to the four breast cancer imaging types only.
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/modeselect.png" width=70%/>
 </div>
