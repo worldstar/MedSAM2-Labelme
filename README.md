@@ -33,20 +33,20 @@ labelme
 ```
 
 ## Mode Selection
-We offer four mode options: two fully automated(`ENTIRE FOLDER`, `ONE IMAGE`) and two semi-automated(`BATCH TASK`, `GENERAL`). The fully automated modes are divided into single image and entire folder, while the semi-automated modes are divided into batch processing tasks and general mode.
+The segmentation system is divided into four modes based on single-image and multi-image processing. Multi-image processing supports an automatic segmentation mode, while single-image processing offers an automatic mode, a semi-automatic single segmentation region mode, and a semi-automatic multi segmentation region mode.
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/modeselect.png" width=70%/>
 </div>
 
-### Semi-automatic mode : SEMI-AUTO(CLICK)
-Click `SEMI-AUTO(CLICK)` button.
+### Single-image : SEMI-AUTO single segmentation region mode
+Click the button.
 Then a red dot will appear at the location you click on the window.  
 Click on the window , and press `Enter` after finishing. 
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="70%" />  
 </div>
 
-### Click Noise Points for SEMI-AUTO(CLICK)
+### Click Noise Points for SEMI-AUTO single segmentation region mode
 By selecting some noise points, we can further improve the accuracy. The default mode is `Select Subject` and you can switch between the `Select Subject` and `Select Background` modes by clicking the respective buttons.  
 Before using `Select Background` ：  
 <div align="center">
@@ -59,22 +59,21 @@ After using `Select Background` ：
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="70%">  
 </div>
 
-### Transfer Point for SEMI-AUTO(CLICK)
+### Transfer Point for SEMI-AUTO single segmentation region mode
 In semi-automatic segmentation for consecutive images, pressing `Enter` will allow the use of points from the previous image.  
-Note that the `BATCH TASK` mode does not support point passing.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="70%">  
 </div>
 
-### Semi-automatic mode : BATCH-TASK(CLICK)
-This mode provides a button labeled `BATCH TASK(CLICK)` or the `Esc` key on the keyboard as a shortcut, allowing multiple segmentations within a single image. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.  
+### Single-image : SEMI-AUTO multi segmentation region mode
+This mode provides a button labeled `BATCH TASK` or the `Esc` key on the keyboard as a shortcut, allowing multiple segmentations within a single image , press Enter to exit after completion. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="70%" />  
 </div>
 
-### Automatic mode : ONE IMAGE(AUTO) and ENTIRE FOLDER(AUTO)
-Open your image folder, and click `ONE IMAGE(AUTO)` button or `ENTIRE FOLDER(AUTO)` button.  
-`ONE IMAGE (AUTO)` is for segmenting the current image, while `ENTIRE FOLDER (AUTO)` is for segmenting all images in the current folder, with the `ENTIRE FOLDER (AUTO)` segmentation progress displayed in the terminal. At the end, it will display a list of image filenames in which tumors were detected.
+### Automatic mode : Multi-image and Single-image
+Open your image folder, and click `Multi-image AUTO` button or `Single-image AUTO` button.  
+`Single-image AUTO` is for segmenting the current image, while `Multi-image AUTO` is for segmenting all images in the current folder, with the `Multi-image AUTO` segmentation progress displayed in the terminal. At the end, it will display a list of image filenames in which tumors were detected.
 The fully automated segmentation supports ADC, DCE, DWI, and PET images, but currently, it does not support cardiac ultrasound images.  
 
 ### Demonstration of Automatic mode
