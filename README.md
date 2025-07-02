@@ -78,6 +78,9 @@ Click the 'Next Use Semi-Auto' button to open the next image and activate the se
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/nextbutton.png" width="70%">  
 </div>
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/nextbutton-demo.gif" width="70%" />  
+</div>
 
 ###  Single-image : SEMI-AUTO multi segmentation region mode
 This mode provides a button labeled `BATCH TASK` or the `Esc` key on the keyboard as a shortcut, allowing multiple segmentations within a single image , press Enter to exit after completion. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.  
