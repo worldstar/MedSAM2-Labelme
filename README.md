@@ -79,7 +79,7 @@ Click the 'Next Use Semi-Auto' button to open the next image and activate the se
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/nextbutton.png" width="70%">  
 </div>
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/nextbutton-demo.gif" width="70%" />  
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/屏幕录制 2025-06-21 154603 (1).gif" width="70%" />  
 </div>
 
 ###  Single-image : SEMI-AUTO multi segmentation region mode
