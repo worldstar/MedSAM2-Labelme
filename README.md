@@ -129,11 +129,11 @@ First, we need to label the arteries or other structures in `PET` and name them 
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/setbase.png" width=70%>
 </div>  
-Then, when you click the `calculate TBR` button, all the information will appear in the embedded window on the right, and the calculation results will also be automatically saved as a .txt file.  
+Then, when you click the ` calculate TBR ` button, all the information will appear in the embedded window on the right, and the calculation results will also be automatically saved as a .txt file.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/calctbr.png" width=70%>
 </div>  
-If you accidentally close this window, don’t worry. You can find it in the 'View' menu on the toolbar, or you can simply click `calculate TBR` again.  
+If you accidentally close this window, don’t worry. You can find it in the `View` menu on the toolbar, or you can simply click `calculate TBR` again.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/tbrintoolbar.png" width=70%>
 </div>
