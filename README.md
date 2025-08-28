@@ -124,6 +124,20 @@ In general usage, label names are automatically generated based on the user-spec
 ### Save json file
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
 
+### Tumor to Background Ratio
+First, we need to label the arteries or other structures in 'PET' and name them as 'base'. You can use all the shape tools available in Labelme.  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/setbase.png" width=70%>
+</div>  
+Then, when you click the 'calculate TBR' button, all the information will appear in the embedded window on the right, and the calculation results will also be automatically saved as a .txt file.  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/calctbr.png" width=70%>
+</div>  
+If you accidentally close this window, don’t worry. You can find it in the 'View' menu on the toolbar, or you can simply click 'calculate TBR' again.  
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/tbrintoolbar.png" width=70%>
+</div>
+
 ## Installation
 
 ### Our environment
