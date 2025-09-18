@@ -125,7 +125,7 @@ In general usage, label names are automatically generated based on the user-spec
 It will automatically save a JSON file, and the file will be named as `filename.json`.  
 
 ### Tumor to Background Ratio
-First, we need to label the arteries or other structures in `PET` and name them as `base`. You can use all the shape tools available in Labelme.  
+First, we need to label the arteries or other structures in `PET` and name them as `base_(keyword)`. You can use all the shape tools available in Labelme.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/setbase.png" width=70%>
 </div>  
