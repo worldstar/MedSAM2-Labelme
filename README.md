@@ -8,9 +8,6 @@
   | <a href="#setup"><b>Setup</b></a>
 </div>
 </br>
-<div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/demonstration1.png" width="70%">
-</div>
 
 ## Description
 Our goal is to significantly reduce the time doctors spend annotating images and make the tool accessible for non-professional users as well.  
