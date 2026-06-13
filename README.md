@@ -129,7 +129,9 @@ If you accidentally close this window, don’t worry. You can find it in the `Vi
 
 ### Normalized Brightness
 If your image is too dark and difficult to interpret, you can use the `Brightness Adjustment` function to enhance its visibility. This feature works in the same way as `TBR Only` and relies on the selected **`base point`**. By default, the adjustment range is set to `None` , but you can choose from three available modes: `left` , `right` , and `all` , which apply brightness normalization to the left half, right half, or the entire image, respectively. Clicking `Normalize Only` will perform brightness normalization without any further processing, while clicking `Normalize then TBR` will first normalize the image brightness and then automatically calculate the TBR value.
-
+<div align="center">
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/normalize.png" width=70%>
+</div>
 
 ## Installation
 
