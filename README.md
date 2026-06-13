@@ -33,7 +33,7 @@ labelme
 The segmentation system is divided into four modes based on single-image and multi-image processing. Multi-image processing supports an automatic segmentation mode, while single-image processing offers an automatic mode, a semi-automatic single segmentation region mode, and a semi-automatic multi segmentation region mode.  
 All semi-automatic segmentation modes support four types of breast cancer imaging modalities (ADC, DCE, DWI, PET) as well as cardiac ultrasound image segmentation. In contrast, all automatic modes are limited to the four breast cancer imaging types only.
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/modeselect2.png" width=70%/>
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/屏幕截图 2026-06-13 155513.png" width=70%/>
 </div>
 
 ### Auto set label name
@@ -43,12 +43,12 @@ If the label name is set to 'default', the folder name will be automatically use
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/setlabelname.png" width=70%/>
 </div>
 
-### Single-image : SEMI-AUTO single segmentation region mode
+### Single-image : SEMI-AUTO mode
 Click the button.
 Then a red dot will appear at the location you click on the window.  
 Click on the window , and press `Enter` after finishing. 
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-semi.gif" width="70%" />  
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/semi-auto.gif" width="70%" />  
 </div>
 
 ### Click Noise Points for SEMI-AUTO single segmentation region mode
