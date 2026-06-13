@@ -59,7 +59,7 @@ Using `Noise` ：
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/noise.gif" width="70%">  
 </div>
 
-### Transfer Point for SEMI-AUTO single segmentation region mode
+### Transfer Point for SEMI-AUTO mode
 In semi-automatic segmentation for consecutive images, pressing `Enter` will allow the use of points from the previous image.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/infect-point.gif" width="70%">  
@@ -68,13 +68,10 @@ In semi-automatic segmentation for consecutive images, pressing `Enter` will all
 ### Quick launch for semi-automatic segmentation and open next image
 Click the 'Next Use Semi-Auto' button to open the next image and activate the semi-automatic segmentation mode. Click the 'Next Semi But Auto' button to open the next image and perform automatic segmentation. If the selected mode is 'semi-auto', the segmentation will use the existing points; if the mode is 'single image auto', it will perform full automatic segmentation.  
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/nextbutton.png" width="70%">  
-</div>
-<div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/屏幕录制 2025-06-21 154603 (1).gif" width="70%" />  
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/next-semi.png" width="70%">  
 </div>
 
-###  Single-image : SEMI-AUTO multi segmentation region mode
+###  Single-image : Multi Megmentation Region mode
 This mode provides a button labeled `BATCH TASK` or the `Esc` key on the keyboard as a shortcut, allowing multiple segmentations within a single image , press Enter to exit after completion. The final segmentation results are collected into a single JSON file. This is useful, for example, when annotating ultrasound images of the heart.  
 <div align="center">
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/heart.gif" width="70%" />  
@@ -119,11 +116,11 @@ It will automatically save a JSON file, and the file will be named as `filename.
 ### Tumor to Background Ratio
 First, we need to label the arteries or other structures in `PET` and name them as `base_(keyword)`，for example `base_1` or `base_abc`,can support multiple `base_(keyword)`. You can use all the shape tools available in Labelme.  
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/setbase.png" width=70%>
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/base-point.png" width=70%>
 </div>  
-Then, when you click the ` calculate TBR ` button, all the information will appear in the embedded window on the right, and the calculation results will also be automatically saved as a .csv file.  
+Then, when you click the `TBR Only` button, all the information will appear in the embedded window on the right, and the calculation results will also be automatically saved as a .csv file.  
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/calctbr.png" width=70%>
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/tbr.png" width=70%>
 </div>  
 If you accidentally close this window, don’t worry. You can find it in the `View` menu on the toolbar, or you can simply click `calculate TBR` again.  
 <div align="center">
