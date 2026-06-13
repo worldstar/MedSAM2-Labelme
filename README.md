@@ -51,17 +51,12 @@ Click on the window , and press `Enter` after finishing.
   <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/semi-auto.gif" width="70%" />  
 </div>
 
-### Click Noise Points for SEMI-AUTO single segmentation region mode
-By selecting some noise points, we can further improve the accuracy. The default mode is `Select Subject` and you can switch between the `Select Subject` and `Select Background` modes by clicking the respective buttons.  
-Before using `Select Background` ：  
-<div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.png" width="70%">  
-</div>
-
-After using `Select Background` ：  
+### Click Noise Points for SEMI-AUTO mode
+By selecting some noise points, we can further improve the accuracy. The default mode is `Subject` and you can switch between the `Subject` and `Noise` modes by clicking the respective buttons.  
+Using `Noise` ：  
 
 <div align="center">
-  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/dce-show-bg.gif" width="70%">  
+  <img src="https://github.com/worldstar/MedSAM2-Labelme/blob/main/examples/medsam2/noise.gif" width="70%">  
 </div>
 
 ### Transfer Point for SEMI-AUTO single segmentation region mode
